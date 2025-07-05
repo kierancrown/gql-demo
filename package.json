@@ -1,0 +1,26 @@
+{
+  "name": "gql-server",
+  "module": "index.ts",
+  "private": true,
+  "scripts": {
+    "start-dev": "ts-node index.ts",
+    "dev": "nodemon index.ts",
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.0.10",
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2"
+  },
+  "peerDependencies": {
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@graphql-tools/schema": "^10.0.23",
+    "express": "^5.1.0",
+    "express-graphql": "^0.12.0",
+    "graphql": "^16.11.0"
+  }
+}
