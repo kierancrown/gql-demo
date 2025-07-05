@@ -1,26 +1,14 @@
 {
-  "name": "gql-server",
-  "module": "index.ts",
-  "private": true,
-  "scripts": {
-    "dev": "bun --hot src/index.ts",
-    "build": "tsc"
-  },
-  "devDependencies": {
-    "@types/bun": "latest",
-    "@types/express": "^5.0.3",
-    "@types/node": "^24.0.10",
-    "prisma": "^6.11.1"
-  },
-  "peerDependencies": {
-    "typescript": "^5.8.3"
-  },
-  "dependencies": {
-    "@graphql-tools/schema": "^10.0.23",
-    "@prisma/client": "^6.11.1",
-    "express": "^5.1.0",
-    "express-graphql": "^0.12.0",
-    "graphql": "^16.11.0",
-    "sqlite3": "^5.1.7"
-  }
+    "name": "gql-monorepo",
+    "private": true,
+    "workspaces": [
+        "apps/*",
+        "packages/*"
+    ],
+    "scripts": {
+        "backend:dev": "bun --hot apps/backend/src/index.ts",
+        "backend:build": "tsc --project apps/backend/tsconfig.json",
+        "frontend:dev": "bun --cwd apps/frontend dev",
+        "frontend:build": "bun --cwd apps/frontend build"
+    }
 }

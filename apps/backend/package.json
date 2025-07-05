@@ -1,0 +1,28 @@
+{
+  "name": "gql-server",
+  "module": "index.ts",
+  "private": true,
+  "scripts": {
+    "dev": "bun --hot src/index.ts",
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.0.10",
+    "prisma": "^6.11.1"
+  },
+  "peerDependencies": {
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@graphql-tools/schema": "^10.0.23",
+    "@prisma/client": "^6.11.1",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "express-graphql": "^0.12.0",
+    "graphql": "^16.11.0",
+    "sqlite3": "^5.1.7"
+  }
+}
